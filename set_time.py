@@ -26,3 +26,4 @@ def setTimeInteractive():
     if minute:
         args['minute']=int(minute)
     return setTime(**args)  
+#new string for git purposes
