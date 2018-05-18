@@ -28,6 +28,7 @@ class Listener:
             #notice parent_name = 'created', special keyword
             parent_marker = timeline.customMarker(parent_name = 'created')
             node.setChild(parent_marker[0])
+            timeline.setChild(parent_marker[1])
 
             rnodes= rnodes + [node] + parent_marker
             #print(timeline.children)
