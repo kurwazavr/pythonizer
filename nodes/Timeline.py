@@ -42,9 +42,10 @@ class Timeline:
             #find yourself created in DB
             if node.__class__.__name__ == 'Timeline':
                 first_self = node
+                first_self.children.sort(key = lambda x:x.title)
                 #append groups [parent_name,marker]
-                for node in rnodes:
-                    for child in first_self.children:
+                for child in first_self.children:
+                    for node in rnodes:
                         try:
                             #if node.title == 'created':
                             if child in node.children:
@@ -52,9 +53,9 @@ class Timeline:
                         except Exception:
                             pass
                 #append group elements nodes, it'll be [node,parent_name,marker]
-                for node in rnodes:
+                for obj in groups:
                     #found = False
-                    for obj in groups:
+                    for node in rnodes:
                         
                         try:
                             if obj[0] in node.children:

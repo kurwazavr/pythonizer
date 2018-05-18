@@ -22,8 +22,8 @@ class Sorter:
                 else:
                 
                     rule_false.append(node)
-            print(str(len(rule_true))+' sorted upwards')
-            pickling.write(rule_true+rule_false)
+            print(str(len(rule_true))+' sorted downwards')
+            pickling.write(rule_false+rule_true)
             
         except Exception:
             traceback.print_exc()
