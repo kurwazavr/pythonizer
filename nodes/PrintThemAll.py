@@ -6,10 +6,12 @@ class PrintThemAll:
         #self.children = []
     def __call__(self):
         for index,node in enumerate(pickling.read()):
-            print(str(index).rjust(4,' ') + ' ',end = '')
             try:
+                print(str(index).rjust(4,' ') + ' ',end = '')
+                print(('children:'+ str(len(node.children))).ljust(10,' ') + ' ',end = '')
                 print(node.title)
             except Exception:
+                print(str(index).rjust(4,' ') + ' ',end = '')
                 print('has no title')
         #out = input('tell:')
         #print(out)
