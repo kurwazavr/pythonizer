@@ -6,3 +6,4 @@ import nodes.Sorter
 import nodes.Timeline
 import nodes.Jumper
 import nodes.Search
+import nodes.Termux
