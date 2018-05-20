@@ -2,6 +2,13 @@ import pickling
 import getch
 import traceback
 import nodes
+from subprocess import call
+
+try:
+    call(['termux-wake-lock'])
+    print('called wakelock')
+except Exception:
+    print('wake lock exception')
 
 rnodes = pickling.read()
 
