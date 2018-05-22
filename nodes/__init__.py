@@ -7,3 +7,6 @@ import nodes.Timeline
 import nodes.Jumper
 import nodes.Search
 import nodes.Termux
+import nodes.Launch
+import nodes.Pickler
+import nodes.AutoComplete
